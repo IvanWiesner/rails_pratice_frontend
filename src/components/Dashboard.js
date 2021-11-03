@@ -35,10 +35,26 @@ function Dashboard() {
             }
         })
     }
-  return (
-    <div className="Dashboard">
-      <p>dashboard</p>
-    </div>
-  )
+    return (
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+            <form onSubmit={onSubmit}>
+            <label>
+                Email:  <br></br>
+                <input type="text" id="login" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            </label>
+            <br></br>
+            <label>
+                Password:  <br></br>
+                <input type="text" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            </label>
+            {/* <input type="submit" value="Sign up to acess Website!"/> */}
+            <input type="submit" value="Login" class="fadeIn fourth"/>
+            </form>
+            {errors?errors.map(e => <p>{e}</p>):null}
+            </div>
+        </div>
+    )
 }
+
 export default Dashboard;
