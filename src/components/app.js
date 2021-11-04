@@ -7,6 +7,7 @@ function App() {
       <Switch>
         <Route exact path={"/"} component={Home} />
         <Route exact path={"/dashboard"} component={Dashboard} />
+        <Route exact path={"/login"} component={Login} />
       </Switch>
       </BrowserRouter>
     </div>
